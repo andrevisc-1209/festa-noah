@@ -17,18 +17,6 @@
       margin: 0 auto;
     }
 
-    @media (max-width: 699px) {
-      body { padding-bottom: 76px; }
-    }
-
-    /* ── FADE-IN ON SCROLL ── */
-    .fade-section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
-    .fade-section.visible { opacity: 1; transform: translateY(0); }
-
     /* ── HERO ── */
     .hero {
       background: linear-gradient(160deg, #FFF3C4 0%, #FFD6E7 50%, #C8E6FF 100%);
@@ -49,9 +37,9 @@
       0%   { transform: translateY(-20px) rotate(0deg);   opacity: 0.8; }
       100% { transform: translateY(220px) rotate(360deg); opacity: 0;   }
     }
-    .animals { font-size: clamp(1.7rem, 6vw, 2.4rem); margin-bottom: 0.4rem; position: relative; }
-    .hero h1 { font-family: 'Fredoka One', cursive; font-size: clamp(1.8rem, 7vw, 2.4rem); color: #5F3FA0; line-height: 1.1; margin-bottom: 0.3rem; position: relative; }
-    .hero h2 { font-family: 'Fredoka One', cursive; font-size: clamp(1.05rem, 4.5vw, 1.3rem); color: #E07B9E; margin-bottom: 0.8rem; position: relative; }
+    .animals { font-size: 2.4rem; margin-bottom: 0.4rem; position: relative; }
+    .hero h1 { font-family: 'Fredoka One', cursive; font-size: 2.4rem; color: #5F3FA0; line-height: 1.1; margin-bottom: 0.3rem; position: relative; }
+    .hero h2 { font-family: 'Fredoka One', cursive; font-size: 1.3rem; color: #E07B9E; margin-bottom: 0.8rem; position: relative; }
     .age-badge {
       display: inline-block;
       background: #5F3FA0; color: #fff;
@@ -59,43 +47,7 @@
       padding: 6px 22px; border-radius: 999px; margin-bottom: 1rem;
       position: relative;
     }
-    .date-info { font-size: 0.92rem; color: #555; font-weight: 600; position: relative; margin-bottom: 1.2rem; }
-
-    .hero-ctas {
-      position: relative;
-      display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;
-    }
-    .hero-btn {
-      font-family: 'Fredoka One', cursive;
-      font-size: clamp(0.85rem, 3.5vw, 1rem);
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 999px;
-      display: inline-flex; align-items: center; gap: 6px;
-      transition: transform 0.15s, background 0.2s;
-      border: 2px solid #5F3FA0;
-    }
-    .hero-btn:active { transform: scale(0.97); }
-    .hero-btn-rsvp { background: #5F3FA0; color: #fff; }
-    .hero-btn-rsvp:hover { background: #4C3080; }
-    .hero-btn-cal { background: #fff; color: #5F3FA0; }
-    .hero-btn-cal:hover { background: #F5F0FF; }
-
-    /* ── FLOATING CTA (mobile) ── */
-    .floating-cta {
-      position: fixed; left: 0; right: 0; bottom: 0;
-      background: #5F3FA0; color: #fff;
-      font-family: 'Fredoka One', cursive;
-      font-size: 0.95rem;
-      text-align: center;
-      text-decoration: none;
-      padding: 14px 16px;
-      box-shadow: 0 -4px 14px rgba(0,0,0,0.18);
-      z-index: 999;
-      transition: transform 0.3s ease;
-    }
-    .floating-cta.hide { transform: translateY(120%); }
-    @media (min-width: 700px) { .floating-cta { display: none; } }
+    .date-info { font-size: 0.92rem; color: #555; font-weight: 600; position: relative; }
 
     /* ── SECTIONS ── */
     .section {
@@ -126,17 +78,6 @@
     }
     .map-link:hover { text-decoration: underline; }
 
-    /* ── PARENT TIPS ── */
-    .tips-section { background: #FFFBEA; border: 1px solid #FBE8A6; }
-    .tips-grid { display: flex; flex-direction: column; gap: 10px; }
-    .tip-item {
-      display: flex; align-items: flex-start; gap: 10px;
-      background: #fff; border: 1px solid #FBE8A6;
-      border-radius: 12px; padding: 10px 14px;
-    }
-    .tip-icon { font-size: 1.3rem; flex-shrink: 0; line-height: 1.4; }
-    .tip-item p { font-size: 0.9rem; color: #5A4A1E; line-height: 1.4; font-weight: 600; }
-
     /* ── GIFT LIST ── */
     .priority-banner {
       background: linear-gradient(135deg, #FFF3C4, #FFE4F0);
@@ -150,14 +91,6 @@
       border-radius: 999px; padding: 3px 11px;
       font-size: 0.78rem; font-weight: 700; color: #5C4000;
     }
-
-    .shoe-callout {
-      display: flex; align-items: center; gap: 10px;
-      background: #FFF3C4; border: 2px solid #FAC775;
-      border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1rem;
-    }
-    .shoe-callout .shoe-icon { font-size: 1.6rem; flex-shrink: 0; }
-    .shoe-callout p { font-size: 0.86rem; color: #5C4000; line-height: 1.4; }
 
     .gift-accordion { border: 1px solid #e8e4f5; border-radius: 12px; overflow: hidden; }
     .gift-cat { border-bottom: 1px solid #e8e4f5; }
@@ -186,39 +119,21 @@
     }
     .gift-cat-body ul li:last-child { border-bottom: none; }
     .gift-cat-body ul li::before { content: "•"; color: #9B72D0; font-weight: 700; flex-shrink: 0; }
+    .gift-note {
+      font-size: 0.78rem; color: #7A5900; margin-top: 8px; font-style: italic;
+      background: #FFF8E7; padding: 7px 10px; border-radius: 8px; border: 1px solid #FAD890;
+    }
 
     /* ── PHOTOS ── */
     .photos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-    .photos-grid img {
-      width: 100%; aspect-ratio: 1; object-fit: cover;
-      border-radius: 12px; cursor: pointer;
-      transition: transform 0.15s;
-      display: block;
+    .photo-slot {
+      aspect-ratio: 1; border-radius: 12px; overflow: hidden;
+      background: linear-gradient(135deg, #FFE4F0, #E8D5FF);
+      border: 2px dashed #C9A0F0;
+      display: flex; align-items: center; justify-content: center; flex-direction: column;
+      color: #9B72D0; font-size: 0.7rem; font-weight: 600; text-align: center; gap: 4px;
     }
-    .photos-grid img:hover { transform: scale(1.03); }
-
-    /* ── LIGHTBOX ── */
-    .lightbox {
-      display: none;
-      position: fixed; inset: 0;
-      background: rgba(15, 10, 25, 0.92);
-      align-items: center; justify-content: center;
-      z-index: 2000; padding: 20px;
-    }
-    .lightbox.open { display: flex; }
-    .lightbox-img { max-width: 90vw; max-height: 82vh; border-radius: 12px; object-fit: contain; }
-    .lightbox-close, .lightbox-nav {
-      position: fixed;
-      background: rgba(255,255,255,0.15); color: #fff;
-      border: none; border-radius: 999px;
-      width: 42px; height: 42px; font-size: 1.3rem;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-    }
-    .lightbox-close:hover, .lightbox-nav:hover { background: rgba(255,255,255,0.3); }
-    .lightbox-close { top: 16px; right: 16px; }
-    .lightbox-nav { top: 50%; transform: translateY(-50%); }
-    .lightbox-prev { left: 16px; }
-    .lightbox-next { right: 16px; }
+    .photo-slot img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
 
     /* ── RSVP ── */
     .forms-cta { text-align: center; margin-bottom: 1rem; }
@@ -243,7 +158,7 @@
 <body>
 
   <!-- HERO -->
-  <header class="hero fade-section">
+  <header class="hero">
     <div class="confetti" aria-hidden="true">
       <span style="left:5%;animation-delay:0s;animation-duration:3s">🎵</span>
       <span style="left:18%;animation-delay:0.5s;animation-duration:4s">🌟</span>
@@ -257,14 +172,10 @@
     <h2>Banda dos Bichinhos</h2>
     <div class="age-badge">🎂 2 aninhos</div>
     <p class="date-info">📅 Sábado, 12 de setembro · 14h</p>
-    <div class="hero-ctas">
-      <a class="hero-btn hero-btn-rsvp" href="https://forms.gle/U86TSGLcRPPLEjNaA" target="_blank" rel="noopener">Confirmar Presença 🎵</a>
-      <a class="hero-btn hero-btn-cal" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Festa%20do%20Noah%20%F0%9F%8E%82&dates=20260912T140000/20260912T160000&details=Venha%20celebrar%20os%202%20aninhos%20do%20Noah!%20Tema%3A%20Banda%20dos%20Bichinhos%20%F0%9F%8E%B8&location=Rua%20das%20Laranjeiras%2C%20314%20-%20Rio%20de%20Janeiro&ctz=America%2FSao_Paulo" target="_blank" rel="noopener">Adicionar à Agenda 📅</a>
-    </div>
   </header>
 
   <!-- ENDEREÇO -->
-  <section class="section fade-section" aria-label="Endereço">
+  <section class="section" aria-label="Endereço">
     <h2 class="section-title"><span aria-hidden="true">📍</span> Endereço</h2>
     <div class="address-box">
       <p>Rua das Laranjeiras, 314</p>
@@ -279,19 +190,8 @@
     </div>
   </section>
 
-  <!-- DICAS PARA OS PAPAIS -->
-  <section class="section tips-section fade-section" aria-label="Dicas para os papais">
-    <h2 class="section-title"><span aria-hidden="true">💡</span> Dicas para os papais</h2>
-    <div class="tips-grid">
-      <div class="tip-item"><span class="tip-icon" aria-hidden="true">👗</span><p>Tragam uma muda de roupa extra para os pequenos</p></div>
-      <div class="tip-item"><span class="tip-icon" aria-hidden="true">🍼</span><p>Haverá espaço tranquilo para amamentação e troca de fraldas</p></div>
-      <div class="tip-item"><span class="tip-icon" aria-hidden="true">🚗</span><p>Estacionamento na rua — chegue com 10 minutos de antecedência</p></div>
-      <div class="tip-item"><span class="tip-icon" aria-hidden="true">🛒</span><p>Carrinho de bebê? Temos espaço para guardar!</p></div>
-    </div>
-  </section>
-
   <!-- LISTA DE PRESENTES -->
-  <section class="section fade-section" aria-label="Lista de presentes">
+  <section class="section" aria-label="Lista de presentes">
     <h2 class="section-title"><span aria-hidden="true">🎁</span> Lista de presentes do Noah</h2>
 
     <div class="priority-banner">
@@ -310,11 +210,6 @@
         <span class="priority-tag">🏊 Roupa de natação combinando</span>
         <span class="priority-tag">🦖 Fantasia de dinossauro</span>
       </div>
-    </div>
-
-    <div class="shoe-callout">
-      <span class="shoe-icon" aria-hidden="true">👟</span>
-      <p><strong>Importante:</strong> Ele usa tamanho <strong>22</strong> atualmente. Prioridade nos tamanhos <strong>22 e 23</strong>, alguns 24 para crescer.</p>
     </div>
 
     <div class="gift-accordion">
@@ -351,6 +246,7 @@
             <li>Papete/sandália confortável</li>
             <li>Crocs divertido/de personagem</li>
           </ul>
+          <p class="gift-note">💡 Ele usa 22 atualmente. Prioridade nos tamanhos 22 e 23, alguns 24 para crescer.</p>
         </div>
       </div>
 
@@ -453,36 +349,32 @@
         </div>
       </div>
 
-    </div><!-- /gift-accordion -->
-  </section>
-
-  <!-- FOTOS -->
-  <section class="section fade-section" aria-label="Fotos do Noah">
-    <h2 class="section-title"><span aria-hidden="true">📸</span> Fotos do Noah</h2>
-    <div class="photos-grid" id="photosGrid">
-      <img src="foto1.jpg" alt="Foto do Noah 1" loading="lazy" />
-      <img src="foto2.jpg" alt="Foto do Noah 2" loading="lazy" />
-      <img src="foto3.jpg" alt="Foto do Noah 3" loading="lazy" />
-      <img src="foto4.jpg" alt="Foto do Noah 4" loading="lazy" />
-      <img src="foto5.jpg" alt="Foto do Noah 5" loading="lazy" />
-      <img src="foto6.jpg" alt="Foto do Noah 6" loading="lazy" />
-      <img src="foto7.jpg" alt="Foto do Noah 7" loading="lazy" />
-      <img src="foto8.jpg" alt="Foto do Noah 8" loading="lazy" />
-      <img src="foto9.jpg" alt="Foto do Noah 9" loading="lazy" />
-      <img src="foto10.jpg" alt="Foto do Noah 10" loading="lazy" />
     </div>
   </section>
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">✕</button>
-    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Foto anterior">‹</button>
-    <img class="lightbox-img" id="lightboxImg" src="" alt="Foto do Noah ampliada" />
-    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Próxima foto">›</button>
-  </div>
+  <!-- FOTOS -->
+  <section class="section" aria-label="Fotos do Noah">
+    <h2 class="section-title"><span aria-hidden="true">📸</span> Fotos do Noah</h2>
+    <div class="photos-grid">
+      <!--
+        Para adicionar fotos: substitua cada .photo-slot por:
+        <img src="foto1.jpg" alt="Noah" style="border-radius:12px;width:100%;aspect-ratio:1;object-fit:cover;" />
+      -->
+      <div class="photo-slot"><img src="foto1.JPG" alt="Noah" /></div>
+      <div class="photo-slot"><img src="foto2.jpeg" alt="Noah" /></div>
+      <div class="photo-slot"><img src="foto3.jpeg" alt="Noah" /></div>
+      <div class="photo-slot"><img src="foto4.jpeg" alt="Noah" /></div>
+      <div class="photo-slot"><img src="foto5.jpeg" alt="Noah" /></div>
+      <div class="photo-slot"><img src="foto7.jpeg" alt="Noah" /></div>
+      <div class="photo-slot"><img src="foto8.jpeg" alt="Noah" /></div>
+      <div class="photo-slot"><img src="foto9.jpg" alt="Noah" /></div>
+      <div class="photo-slot"><img src="foto10.jpeg" alt="Noah" /></div>
+      <div class="photo-slot"><img src="foto11.JPG" alt="Noah" /></div>
+    </div>
+  </section>
 
   <!-- CONFIRMAÇÃO -->
-  <section class="section fade-section" id="rsvp" aria-label="Confirmação de presença">
+  <section class="section" aria-label="Confirmação de presença">
     <h2 class="section-title"><span aria-hidden="true">✅</span> Confirmação de presença</h2>
     <div class="forms-cta">
       <a
@@ -502,85 +394,12 @@
     <p>Feito com muito amor para o Noah ❤️</p>
   </footer>
 
-  <a class="floating-cta" id="floatingCta" href="https://forms.gle/U86TSGLcRPPLEjNaA" target="_blank" rel="noopener">🎵 Confirmar Presença no Show</a>
-
   <script>
     function toggleCat(btn) {
       const isOpen = btn.classList.toggle('open');
       btn.setAttribute('aria-expanded', isOpen);
       btn.nextElementSibling.classList.toggle('open');
     }
-
-    // Fade-in sections on scroll
-    (function () {
-      var sections = document.querySelectorAll('.fade-section');
-      if (!('IntersectionObserver' in window)) {
-        sections.forEach(function (el) { el.classList.add('visible'); });
-        return;
-      }
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.12 });
-      sections.forEach(function (el) { observer.observe(el); });
-    })();
-
-    // Hide floating CTA once the RSVP section is in view
-    (function () {
-      var bar = document.getElementById('floatingCta');
-      var rsvp = document.getElementById('rsvp');
-      if (!bar || !rsvp || !('IntersectionObserver' in window)) return;
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          bar.classList.toggle('hide', entry.isIntersecting);
-        });
-      }, { threshold: 0.15 });
-      observer.observe(rsvp);
-    })();
-
-    // Photo lightbox
-    (function () {
-      var imgs = Array.prototype.slice.call(document.querySelectorAll('#photosGrid img'));
-      var lightbox = document.getElementById('lightbox');
-      var lightboxImg = document.getElementById('lightboxImg');
-      if (!imgs.length || !lightbox) return;
-      var current = 0;
-
-      function show(i) {
-        current = (i + imgs.length) % imgs.length;
-        lightboxImg.src = imgs[current].src;
-        lightboxImg.alt = imgs[current].alt;
-      }
-      function open(i) {
-        show(i);
-        lightbox.classList.add('open');
-        lightbox.setAttribute('aria-hidden', 'false');
-      }
-      function close() {
-        lightbox.classList.remove('open');
-        lightbox.setAttribute('aria-hidden', 'true');
-      }
-
-      imgs.forEach(function (img, i) {
-        img.addEventListener('click', function () { open(i); });
-      });
-      document.getElementById('lightboxClose').addEventListener('click', close);
-      document.getElementById('lightboxNext').addEventListener('click', function () { show(current + 1); });
-      document.getElementById('lightboxPrev').addEventListener('click', function () { show(current - 1); });
-      lightbox.addEventListener('click', function (e) {
-        if (e.target === lightbox) close();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (!lightbox.classList.contains('open')) return;
-        if (e.key === 'Escape') close();
-        if (e.key === 'ArrowRight') show(current + 1);
-        if (e.key === 'ArrowLeft') show(current - 1);
-      });
-    })();
   </script>
 
 </body>
